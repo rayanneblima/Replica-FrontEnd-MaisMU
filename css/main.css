@@ -26,9 +26,6 @@ header {
     background-image: cover;
     background-size: 100vw 100vh;
     height: 100vh;
-    /* display: flex;  um ao lado do outro 
-    justify-content: space-around; /* alinha com espaço ao redor
-    align-items: center; */
 }
 
 /* INICIO MENU */
@@ -60,6 +57,10 @@ header {
     padding: 0 40px;
 }
 
+.menu-header ul li:last-child {
+    padding-bottom: 10px;
+}
+
 .menu-header ul li a{
     color: white;
     display: block;
@@ -69,8 +70,18 @@ header {
     width: max-content;
 }
 
+#btn-personalizado {
+    background: #182458;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-family: "HansomFYW01";
+    font-size: 1.5em;
+    padding: 15px;
+}
+
 @media (max-width: 1400px) {
-    .menu-header ul li a{
+    .menu-header ul li a, #btn-personalizado {
         font-size: 1.1em;
     }
 }
@@ -131,10 +142,10 @@ header {
 /* FIM CONTEUDO HEADER*/
 /* INICIO CONTEUDO CHOCO*/
 .text-choc-section {
-    background: white;
+    background: url("../img/bg-choco.png");
     background-image: cover;
-    background-size: 100vw 100vh;
-    height: 100vh;
+    background-size: 100vw 120vh;
+    height: 120vh;
 }
 .text-choc-section p {
     color: #30a7ea;
@@ -178,17 +189,8 @@ header {
 /* FIM INFO*/
 /* INICIO SLIDER PRODUTOS */
 .produtos {
-    padding-top: 100px;
+    padding-top: 200px;
     display: flex;
-}
-.produtos-item {
-    border: 4px dotted #30a7ea;
-    margin: 10px;
-}
-.produtos img {
-    cursor: pointer;
-    display: block;
-    width: 100%;
 }
 .produtos-button {
     display: flex;
@@ -277,9 +279,8 @@ header {
 }
 .text-mapa {
     color: #30a7ea;
-    display: block;
     font-weight: 100;
-    text-align: left;
+    margin: 0 40px;
     width: -webkit-fill-available;
 }
 .text-mapa h1 {
@@ -290,9 +291,7 @@ header {
 .text-mapa p {
     font-size: 1.5em;
     padding: 10px 0;
-}
-.text-mapa input[button] {
-    
+    margin-bottom: 20px;
 }
 /* FIM  LOCAL */
 /* INICIO FEEDBACK */
@@ -303,25 +302,11 @@ header {
 }
 .feedback-section h1 {
     text-align: center;
+    padding-bottom: 80px;
     padding-top: 200px;
     color: white;
     font-size: 4em;
     text-transform: uppercase;
-}
-.feedback-container {
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.feedback-item {
-    padding: 0 40px;
-}
-.feedback-item img {
-    
-}
-.feedback-slide {
-
 }
 /* FIM FEEDBACK */
 /* INICIO FORM */
@@ -355,18 +340,26 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 50vh;
 }
-.newsletter-form {
-   
+.newsletter-form input {   
+    border-radius: 20px; 
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    width: 80%;
 }
-.newsletter-form {
-    
+.newsletter-form input::placeholder {
+    color: #30a7ea;
+    padding-left: 10px;
+    text-transform: uppercase;
 }
-.newsletter-form {
+.newsletter-form input[type=text] {
+    height: 40px;
 
 }
-.newsletter-form input[button] {
-
+.newsletter-form input[type=textarea] {
+    text-align: start;
+    height: 100px;
 }
 /* FIM FORM */
 /* INICIO FOOTER */
