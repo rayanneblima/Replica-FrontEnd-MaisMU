@@ -1,0 +1,402 @@
+/* soft reset do css  */
+* {
+    box-sizing: border-box; /* preserva o tamanho do elemento se tiver width definido */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*TODO: arquivo de fontes separado! */
+@font-face {font-family: "HansomFYW01"; src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot"); src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff") format("woff"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.svg#HansomFYW01-Italic") format("svg"); }
+@font-face {font-family: "Hansom FY"; src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot"); src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.svg#Hansom FY") format("svg"); }
+
+body {
+    background-size: 100vw 100vh;
+    font-family: "Hansom FY";
+    height: 100vh;
+}
+
+b {
+    font-family: "HansomFYW01";;
+}
+
+header {
+    background: url("../img/bg-header.png");
+    background-image: cover;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    /* display: flex;  um ao lado do outro 
+    justify-content: space-around; /* alinha com espaço ao redor
+    align-items: center; */
+}
+
+/* INICIO MENU */
+.menu-section {
+    align-items: center;
+    display: flex;
+    height: 110px;
+    justify-content: space-between;
+}
+
+.img-logo {
+    padding: 50px;
+}
+
+.menu-header {
+    background: #30a7ea;
+    border-bottom-left-radius: 30px;
+    width: -webkit-fill-available;
+}
+
+.menu-header ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 110px;
+}
+
+.menu-header ul li {
+    padding: 0 40px;
+}
+
+.menu-header ul li a{
+    color: white;
+    display: block;
+    font-family: "HansomFYW01";
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+@media (max-width: 1400px) {
+    .menu-header ul li a{
+        font-size: 1.1em;
+    }
+}
+
+.menu-header ul li a:hover{
+    text-decoration: underline;
+}
+/* FIM MENU */
+/* INICIO CONTEUDO HEADER */
+.content-header {
+    /*align-items: center;*/
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.text-header {
+    color: white;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+.text-header h1 {
+    font-size: 5em;
+    font-weight: 100;
+    line-height: .9em;
+    padding-bottom: 15px;
+}
+
+.text-header h2 {
+    font-size: 2em;
+    font-weight: 100;
+    line-height: .9em;
+}
+
+.img-header img {
+    display: block;
+    max-height: 750px;
+    max-width: 100%; /* responsividade nas imagens! */
+}
+
+@media (max-height: 700px) {
+    .content-header .text-header h1 { 
+        font-size: 4em;
+        line-height: .8em;
+        padding-bottom: 10px;
+    }
+    .content-header .text-header h2 {
+        font-size: 1.5em;
+        line-height: .8em;
+    }
+    .content-header .img-header img {
+        display: block;
+        max-height: 600px;
+        max-width: 100%; 
+    }
+}
+/* FIM CONTEUDO HEADER*/
+/* INICIO CONTEUDO CHOCO*/
+.text-choc-section {
+    background: white;
+    background-image: cover;
+    background-size: 100vw 100vh;
+    height: 100vh;
+}
+.text-choc-section p {
+    color: #30a7ea;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 100px;
+}
+/* FIM CONTEUDO CHOCO*/
+/* INICIO VIDEO*/
+.video-section {
+    height: 100vh;
+    margin: 20px;
+}
+.video-section img {
+    cursor: pointer;
+    display: block;
+    height: 100vh;
+    width: 100%;
+}
+.video-section iframe {
+    display: block;
+    height: 100vh;
+    width: 100%;
+}
+/* FIM VIDEO*/
+/* INICIO INFO*/
+.info-section {
+    background: white;
+    color: #30a7ea;   
+    font-size: 2em;
+    font-weight: 100;
+    height: 100vh;
+    padding-top: 20px;
+    text-align: center;
+}
+.table-info{
+    display: block;
+    width: 100%;
+}
+/* FIM INFO*/
+/* INICIO SLIDER PRODUTOS */
+.produtos {
+    padding-top: 100px;
+    display: flex;
+}
+.produtos-item {
+    border: 4px dotted #30a7ea;
+    margin: 10px;
+}
+.produtos img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.produtos-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+/* FIM SLIDER PRODUTOS */
+/* INICIO SOBRE A VAQUINHA */
+.sobre-section {
+    background: url("../img/bg-sobre.png");
+    background-size: 100vw 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-vaquinha {
+    width: 100%;
+}
+.img-vaquinha img {
+    display: block;
+    margin-left: 25%;
+}
+.text-sobre {
+    color: white;
+    display: block;
+    font-weight: 100;
+    text-align: left;
+    width: -webkit-fill-available;
+}
+.text-sobre h3 {
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+.text-sobre h1 {
+    font-size: 4em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+.text-sobre p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+/* FIM SOBRE A VAQUINHA */
+/* INICIO SAIBA MAIS */
+.saibamais-section {
+    background: url("../img/bg-whey.png");
+    background-size: 100vw 80vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.text-saibamais {
+    color: #30a7ea;
+    text-align: center;
+}
+.text-saibamais h1 {
+    font-size: 6em;
+    line-height: .8em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.text-saibamais p {
+    font-size: 1.4em;
+}
+.saibamais-button {
+    padding-top: 30px; 
+}
+/* FIM SAIBA MAIS */
+/* INICIO LOCAL */
+.mapa-section {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.mapa-img {
+    width: 100%;
+}
+.mapa-img img {
+    display: block;
+    margin-left: 25%;
+}
+.text-mapa {
+    color: #30a7ea;
+    display: block;
+    font-weight: 100;
+    text-align: left;
+    width: -webkit-fill-available;
+}
+.text-mapa h1 {
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text-mapa p {
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+.text-mapa input[button] {
+    
+}
+/* FIM  LOCAL */
+/* INICIO FEEDBACK */
+.feedback-section {
+    background: url("../img/bg-feedback.png");
+    background-size: 100vw 100vh;
+    height: 100vh;
+}
+.feedback-section h1 {
+    text-align: center;
+    padding-top: 200px;
+    color: white;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+.feedback-container {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feedback-item {
+    padding: 0 40px;
+}
+.feedback-item img {
+    
+}
+.feedback-slide {
+
+}
+/* FIM FEEDBACK */
+/* INICIO FORM */
+.form-section {
+    background: url("../img/bg-form.png");
+    background-size: 100vw 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-info {
+    text-align: left;
+    color: white;
+    height: 60%;
+    margin: 0 auto;
+}
+.form-info h1 {
+    font-size: 6em;
+    line-height: .9em;
+    text-transform: uppercase;
+}
+.form-info p {
+    font-size: 1.6em;
+    line-height: 1.5em;
+}
+.newsletter-form {
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.newsletter-form {
+   
+}
+.newsletter-form {
+    
+}
+.newsletter-form {
+
+}
+.newsletter-form input[button] {
+
+}
+/* FIM FORM */
+/* INICIO FOOTER */
+footer {
+    align-items: center;
+    background-color: #182458;
+    bottom: 0;
+    display: flex;
+    font-size: 2em;
+    height: 140px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.fab {
+    color: white;
+}
+
+.icons-footer ul{
+    align-items: center;  
+    display: flex;
+}
+
+.icons-footer ul li{
+    padding: 0 40px;
+}
+
+.icons-footer ul li a{
+    display: block;
+    border-color: white;
+    border-radius: 50%;
+}
+/* FIM FOOTER */
