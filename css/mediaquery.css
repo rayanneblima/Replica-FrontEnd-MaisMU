@@ -1,0 +1,85 @@
+/* media queries */
+html {
+    font-size: 50%;
+}
+
+@media (max-width: 1400px) {
+    .img-header img {
+        max-height: 600px;
+    }
+}
+
+/* TESTES MENU */
+@media (max-width: 1070px) {
+    .menu-header ul li a, #btn-personalizado {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 940px) {
+    .menu-header ul li a, #btn-personalizado {
+        font-size: 1.5rem;
+    }
+}
+/* Aplicar menu sanduiche */
+@media (max-width: 790px) {
+    .menu-header ul li a, #btn-personalizado {
+        font-size: 1.2rem;
+    }
+    .content-header {   
+        margin: 0 auto;
+    }    
+    .text-header h1 {
+        font-size: 8.5rem;
+        padding-bottom: 10px;
+    }
+    .text-header h2 {
+        font-size: 2.8rem;
+    }
+    .img-vaquinha img {
+        margin-left: 10%;
+    }
+}
+
+
+
+
+/*
+@media (max-height: 700px) {
+    .content-header .text-header h1 { 
+        font-size: 4em;
+        line-height: .8em;
+        padding-bottom: 10px;
+    }
+    .content-header .text-header h2 {
+        font-size: 1.5em;
+        line-height: .8em;
+    }
+    .content-header .img-header img {
+        display: block;
+        max-height: 600px;
+        max-width: 100%; 
+    }
+}
+ 
+-arrumar tabela nutricional
+width > 1580
+-ESPAÇAMENTO ENTRE SESSOES, FONTE!
+width < 1340 
+-diminuir fonte titulo inicial, imagem, diminuir fontes sobre a vaquinha
+width < 1280 
+-FONTE MENU !
+width < 1170
+-FEEDBACK BUGANDO!, espaçamento no conta p gente
+width < 1020 
+-fonte mapa (slider lateral), FEEDBACK BUGANDO!, espaçamento no conta p gente
+width < 910
+imagem header sobe centralizado, texto desce; diminuir video, slick produtos bugando!, 
+diminuir fontes sobre a vaquinha e abaixo, feedback bugando, 
+width < 850 FONTES, mapa desce (flex-direction column)
+width < 760 menu hambuguer, vaquinha some
+width < 600 formulario desce inline
+
+
+
+https://github.com/Rocketseat/youtube-masterclass-responsividade/blob/master/final/responsive.css
+*/

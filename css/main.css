@@ -1,3 +1,7 @@
+/*TODO: arquivo de fontes separado! */
+@font-face {font-family: "HansomFYW01"; src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot"); src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff") format("woff"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.svg#HansomFYW01-Italic") format("svg"); }
+@font-face {font-family: "Hansom FY"; src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot"); src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.svg#Hansom FY") format("svg"); }
+
 /* soft reset do css  */
 * {
     box-sizing: border-box; /* preserva o tamanho do elemento se tiver width definido */
@@ -5,16 +9,20 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    outline: 0;
 }
 
-/*TODO: arquivo de fontes separado! */
-@font-face {font-family: "HansomFYW01"; src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot"); src: url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.woff") format("woff"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c38654d2569f9912aa3e7247fcee88fa.svg#HansomFYW01-Italic") format("svg"); }
-@font-face {font-family: "Hansom FY"; src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot"); src: url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c89adc42cbc275c57589d90be76f8c5.svg#Hansom FY") format("svg"); }
+html {
+    /* 10px = 1rem */
+    font-size: 62.5%;
+}
 
+html,
 body {
-    background-size: 100vw 100vh;
     font-family: "Hansom FY";
     height: 100vh;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 b {
@@ -23,7 +31,6 @@ b {
 
 header {
     background: url("../img/bg-header.png");
-    background-image: cover;
     background-size: 100vw 100vh;
     height: 100vh;
 }
@@ -32,12 +39,14 @@ header {
 .menu-section {
     align-items: center;
     display: flex;
-    height: 110px;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: auto; 
 }
 
 .img-logo {
-    padding: 50px;
+    width: 180px;
+    margin: 0 20px;
+    padding: 20px 0;
 }
 
 .menu-header {
@@ -47,25 +56,25 @@ header {
 }
 
 .menu-header ul {
-    align-items: center;
     display: flex;
-    flex-wrap: wrap;
     height: 110px;
+    align-items: center;
 }
 
 .menu-header ul li {
-    padding: 0 40px;
+    margin: 0 auto;
 }
 
 .menu-header ul li:last-child {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .menu-header ul li a{
     color: white;
-    display: block;
     font-family: "HansomFYW01";
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    padding: 2.4rem;
+    transition: all 250ms linear 0s;
     text-transform: uppercase;
     width: max-content;
 }
@@ -76,16 +85,10 @@ header {
     color: white;
     cursor: pointer;
     font-family: "HansomFYW01";
-    font-size: 1.5em;
+    font-size: 2rem;
     padding: 15px;
+    width: max-content;
 }
-
-@media (max-width: 1400px) {
-    .menu-header ul li a, #btn-personalizado {
-        font-size: 1.1em;
-    }
-}
-
 .menu-header ul li a:hover{
     text-decoration: underline;
 }
@@ -94,25 +97,29 @@ header {
 .content-header {
     /*align-items: center;*/
     display: flex;
-    padding: 20px;
-    justify-content: center;
+    padding: 20px 0;
+    justify-content: space-between;
+    /*margin: auto;*/
+    max-width: 1200px;
+    width: 90%;
 }
 
 .text-header {
     color: white;
     text-transform: uppercase;
-    padding: 50px;
+    padding-top: 50px;
+    margin: 0 auto;
 }
 
 .text-header h1 {
-    font-size: 5em;
+    font-size: 10rem;
     font-weight: 100;
     line-height: .9em;
     padding-bottom: 15px;
 }
 
 .text-header h2 {
-    font-size: 2em;
+    font-size: 3rem;
     font-weight: 100;
     line-height: .9em;
 }
@@ -120,82 +127,79 @@ header {
 .img-header img {
     display: block;
     max-height: 750px;
-    max-width: 100%; /* responsividade nas imagens! */
+    max-width: 100%;
+    /*min-width: 430px;  imagem acima do texto quando atingir min 430px */
 }
-
-@media (max-height: 700px) {
-    .content-header .text-header h1 { 
-        font-size: 4em;
-        line-height: .8em;
-        padding-bottom: 10px;
-    }
-    .content-header .text-header h2 {
-        font-size: 1.5em;
-        line-height: .8em;
-    }
-    .content-header .img-header img {
-        display: block;
-        max-height: 600px;
-        max-width: 100%; 
-    }
-}
-/* FIM CONTEUDO HEADER*/
-/* INICIO CONTEUDO CHOCO*/
+/* FIM CONTEUDO HEADER */
+/* INICIO CONTEUDO CHOCO */
 .text-choc-section {
-    background: url("../img/bg-choco.png");
-    background-image: cover;
+    background: url("../img/bg-choco2.png");
     background-size: 100vw 120vh;
     height: 120vh;
 }
+
 .text-choc-section p {
     color: #30a7ea;
-    font-size: 2em;
+    font-size: 4rem;
     font-weight: 100;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 150px;
+
+    margin: 0 auto;
+    max-width: 1200px;
 }
-/* FIM CONTEUDO CHOCO*/
-/* INICIO VIDEO*/
+/* FIM CONTEUDO CHOCO */
+/* INICIO VIDEO */
 .video-section {
-    height: 100vh;
-    margin: 20px;
+    align-items: center;
+    height: 80vh;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 .video-section img {
     cursor: pointer;
     display: block;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
 .video-section iframe {
     display: block;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
-/* FIM VIDEO*/
+/* FIM VIDEO */
 /* INICIO INFO*/
 .info-section {
-    background: white;
     color: #30a7ea;   
-    font-size: 2em;
+    font-size: 4rem;
     font-weight: 100;
     height: 100vh;
-    padding-top: 20px;
+    padding-top: 50px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto; 
 }
-.table-info{
+.table-info img {
     display: block;
-    width: 100%;
+    margin: 0 auto;
+    max-height: 750px;
+    max-width: 100%;
+    padding-left: 40px;
 }
-/* FIM INFO*/
+/* FIM INFO */
 /* INICIO SLIDER PRODUTOS */
 .produtos {
-    padding-top: 200px;
-    display: flex;
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.produtos-item {
+    border-left: 1px solid grey;
 }
 .produtos-button {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding-bottom: 40px;
 }
 /* FIM SLIDER PRODUTOS */
 /* INICIO SOBRE A VAQUINHA */
@@ -213,6 +217,8 @@ header {
 .img-vaquinha img {
     display: block;
     margin-left: 25%;
+    max-height: 750px;
+    max-width: 100%;
 }
 .text-sobre {
     color: white;
@@ -222,17 +228,17 @@ header {
     width: -webkit-fill-available;
 }
 .text-sobre h3 {
-    font-size: 1.5em;
+    font-size: 4rem;
     padding: 10px 0;
 }
 .text-sobre h1 {
-    font-size: 4em;
-    line-height: 1.2em;
+    font-size: 10rem;
+    line-height: .9em;
     text-transform: uppercase;
 }
 .text-sobre p {
-    font-size: 1.2em;
-    line-height: 1.5em;
+    font-size: 2.5rem;
+    line-height: 1em;
 }
 /* FIM SOBRE A VAQUINHA */
 /* INICIO SAIBA MAIS */
@@ -250,13 +256,13 @@ header {
     text-align: center;
 }
 .text-saibamais h1 {
-    font-size: 6em;
+    font-size: 10rem;
     line-height: .8em;
     text-transform: uppercase;
     padding-bottom: 10px;
 }
 .text-saibamais p {
-    font-size: 1.4em;
+    font-size: 2.5rem;
 }
 .saibamais-button {
     padding-top: 30px; 
@@ -266,30 +272,27 @@ header {
 .mapa-section {
     height: 80vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 20px;
-}
-.mapa-img {
-    width: 100%;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 .mapa-img img {
     display: block;
-    margin-left: 25%;
+    max-width: 100%;
+    margin-right: 20px;
 }
 .text-mapa {
     color: #30a7ea;
     font-weight: 100;
-    margin: 0 40px;
-    width: -webkit-fill-available;
 }
 .text-mapa h1 {
-    font-size: 4em;
+    font-size: 8rem;
     line-height: 1em;
     text-transform: uppercase;
 }
 .text-mapa p {
-    font-size: 1.5em;
+    font-size: 2.5em;
     padding: 10px 0;
     margin-bottom: 20px;
 }
@@ -300,12 +303,16 @@ header {
     background-size: 100vw 100vh;
     height: 100vh;
 }
+.feedback-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .feedback-section h1 {
     text-align: center;
     padding-bottom: 80px;
     padding-top: 200px;
     color: white;
-    font-size: 4em;
+    font-size: 6rem;
     text-transform: uppercase;
 }
 /* FIM FEEDBACK */
@@ -325,12 +332,12 @@ header {
     margin: 0 auto;
 }
 .form-info h1 {
-    font-size: 6em;
+    font-size: 10rem;
     line-height: .9em;
     text-transform: uppercase;
 }
 .form-info p {
-    font-size: 1.6em;
+    font-size: 2.5rem;
     line-height: 1.5em;
 }
 .newsletter-form {
@@ -355,7 +362,6 @@ header {
 }
 .newsletter-form input[type=text] {
     height: 40px;
-
 }
 .newsletter-form input[type=textarea] {
     text-align: start;
@@ -368,7 +374,7 @@ footer {
     background-color: #182458;
     bottom: 0;
     display: flex;
-    font-size: 2em;
+    font-size: 4rem;
     height: 140px;
     justify-content: space-around;
     padding: 10px;
@@ -384,12 +390,6 @@ footer {
 }
 
 .icons-footer ul li{
-    padding: 0 40px;
-}
-
-.icons-footer ul li a{
-    display: block;
-    border-color: white;
-    border-radius: 50%;
+    padding: 0 20px;
 }
 /* FIM FOOTER */
