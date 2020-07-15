@@ -133,7 +133,7 @@ header {
 /* FIM CONTEUDO HEADER */
 /* INICIO CONTEUDO CHOCO */
 .text-choc-section {
-    background: url("../img/bg-choco2.png");
+    background: url("../img/bg-choco2.png") no-repeat;
     background-size: 100vw 120vh;
     height: 120vh;
 }
@@ -318,7 +318,7 @@ header {
 /* FIM FEEDBACK */
 /* INICIO FORM */
 .form-section {
-    background: url("../img/bg-form.png");
+    background: url("../img/bg-form.png") no-repeat;
     background-size: 100vw 80vh;
     height: 80vh;
     display: flex;
