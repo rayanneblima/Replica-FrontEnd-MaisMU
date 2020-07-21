@@ -29,8 +29,12 @@ b {
     font-family: "HansomFYW01";;
 }
 
+/* MENU SANDUICHE */
+
+/* FIM MENU SANDUICHE */
+
 header {
-    background: url("../img/bg-header.png");
+    background: url("../img/bg-header.png") no-repeat;
     background-size: 100vw 100vh;
     height: 100vh;
 }
@@ -204,7 +208,7 @@ header {
 /* FIM SLIDER PRODUTOS */
 /* INICIO SOBRE A VAQUINHA */
 .sobre-section {
-    background: url("../img/bg-sobre.png");
+    background: url("../img/bg-sobre.png") no-repeat;
     background-size: 100vw 100vh;
     height: 100vh;
     display: flex;

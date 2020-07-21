@@ -66,6 +66,12 @@ $(document).ready(function () {
     ]
   });
 
+  /* MENU SANDUICHE */
+  $("#toggle").click(function() {
+    $(this).toggleClass("on");
+    $("#menu").slideToggle();
+  });
+
 
 
 });
