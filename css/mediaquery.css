@@ -36,6 +36,21 @@ html {
 }
 /* Aplicar menu sanduiche daqui pra baixo: */
 @media (max-width: 850px) {
+    /*.menu-section {
+        background-color: rgba(48, 167, 234, .6);
+        position: fixed;
+        width: 100vw;
+        z-index: 10;
+        display: inline-block;
+    }
+    .menu-section img {
+        display: none;
+    }*/
+    .menu-section {
+        width: 100vw;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
     #toggle {
         width: 28px;
         height: 30px;
@@ -73,6 +88,12 @@ html {
         border-radius: 3px;
         margin: auto;
         display: none;
+        position: relative;
+        z-index: 100;
+    }
+    .text-header {
+        position: relative;
+        z-index: 0;
     }
     #menu a {
         display: flex;
@@ -80,6 +101,7 @@ html {
         color: white;
         padding: 5px;
     }
+    
 }
 @media (max-width: 790px) {
     .content-header {   
