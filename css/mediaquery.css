@@ -5,7 +5,6 @@ html {
 #toggle, #menu {
     display: none;
 }
-
 @media (max-width: 1400px) {
     .img-header img {
         max-height: 600px;
@@ -46,6 +45,15 @@ html {
     .menu-section img {
         display: none;
     }*/
+    .aux1 {
+        position: absolute;
+        z-index: 100;
+    }
+    .aux2 {
+        padding-top: 100px;
+        position: relative;
+    }
+    
     .menu-section {
         width: 100vw;
         display: inline-flex;
@@ -82,13 +90,13 @@ html {
     #menu {
         background-color: #30a7ea;
         border: 1px solid white;
-        width: 200px;
-        height: auto;
-        padding: 10px;
         border-radius: 3px;
-        margin: auto;
         display: none;
+        height: auto;
+        margin: auto;
+        padding: 10px;
         position: relative;
+        width: 100vw;
         z-index: 100;
     }
     .text-header {
@@ -96,10 +104,14 @@ html {
         z-index: 0;
     }
     #menu a {
+        color: white;
         display: flex;
         font-size: 3em;
-        color: white;
+        justify-content: center;
         padding: 5px;
+    }
+    #menu a:hover {
+        text-decoration: underline;
     }
     
 }
