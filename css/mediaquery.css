@@ -290,7 +290,7 @@ html {
 }
 
 /* Landscape */
-@media (max-height: 550px) and (orientation: landscape) {
+@media (max-width: 650px) and (max-height: 650px) and (orientation: landscape) {
     header {
         background-size: 100vw 200vh;
         height: 200vh;
