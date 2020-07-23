@@ -289,7 +289,60 @@ html {
     }
 }
 
-
+/* Landscape */
+@media (max-height: 550px) and (orientation: landscape) {
+    header {
+        background-size: 100vw 200vh;
+        height: 200vh;
+    }
+    .content-header {
+        flex-direction: row;
+    }
+    .text-choc-section {
+        background-size: 120vw 200vh;
+        background-position-x: -60px;
+        height: 200vh;
+    }
+    .info-section {
+        height: 110vh;
+    }
+    .produtos-section {
+        height: 220vh;
+    }
+    .sobre-section {
+        background-size: 100vw 150vh;
+        height: 100vh;
+    }
+    .img-vaquinha {
+        margin: 0 60px;
+        width: 40%;
+    }
+    .text-sobre h3 {
+        font-size: 3em;
+    }
+    .text-sobre h1 {
+        font-size: 8em;
+    }
+    .saibamais-section {
+        height: 120vh;
+        margin: 20px;
+    }
+    .feedback-section {
+        background-size: 100vw 120vh;
+        height: 120vh;
+    }
+    .feedback-section h1 {
+        padding-top: 100px;
+    }
+    .feedback-section img {
+        padding-bottom: 20px;
+        width: 40%;
+    }
+    .form-section {
+        background-size: 100vw 120vh;
+        height: 100vh;
+    }
+}
 
 /*
 https://github.com/Rocketseat/youtube-masterclass-responsividade/blob/master/final/responsive.css
